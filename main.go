@@ -9,10 +9,6 @@ import (
 )
 
 func main() {
-	beego.EnableXSRF = true
-	beego.XSRFKEY = "61oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2XdTP1o"
-	beego.XSRFExpire = 3600  //过期时间，默认1小时
-
 	templateFunc() //添加模板函数要在beego.Run前执行
 	//orm.Debug = true
 	beego.Run()
