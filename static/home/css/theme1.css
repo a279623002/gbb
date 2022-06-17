@@ -1,0 +1,19 @@
+* {
+    color: skyblue !important;
+}
+
+header img {
+    border: .02rem solid skyblue;
+}
+
+header a.top {
+    text-shadow: 0.05rem 0.05rem 0.05rem black;
+}
+
+header p {
+    text-shadow: 0.05rem 0.05rem 0.05rem black;
+}
+
+header .link a {
+    box-shadow: 0.05rem 0.05rem 0.05rem black;
+}

@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #0e373c;
+    font-family: 'fzyt', Courier, monospace;
+    font-size: .24rem;
+    /* font-size: 24px; */
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: 'fzyt';   /*字体名称*/
+    src: url('../font/fzyt.TTF');       /*字体源文件*/
+}
+
+header {
+    position: fixed;
+    width: 5rem;
+    height: 100%;
+    background: url(../images/newbg.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    top: 0;
+    left: 0;
+    float: left;
+    display: block;
+  	transition: all 1s;
+}
+
+header img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: .02rem solid purple;
+    border-radius: 1.5rem;
+    display: block;
+    margin: .1rem auto;
+}
+
+header p {
+    font-size: .24rem;
+    margin-top: .5rem;
+    color: #fff;
+    text-shadow: .05rem .05rem .05rem blueviolet;
+    text-align: center;
+}
+
+header a.top {
+    display: block;
+    text-align: center;
+    margin: .1rem auto;
+    font-size: 0.48rem;
+    color: #fff;
+    text-shadow: .05rem .05rem .05rem purple;
+    text-decoration: underline;
+}
+
+header .link {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-top: .5rem;
+}
+
+header .link a {
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    box-shadow: .05rem .05rem .05rem purple;
+}
+
+header .link a:first-child {
+    background: url(../images/github-b.png) no-repeat center center;
+    background-size: 100% auto;
+}
+
+header .link a:nth-child(2) {
+    background: url(../images/sina-b.png) no-repeat center center;
+    background-size: 100% auto;
+}
+
+header .link a:nth-child(3) {
+    background: url(../images/QQ-b.png) no-repeat center center;
+    background-size: 100% auto;
+}
+
+main {
+    position: relative;
+    left: 5rem;
+    z-index: 9;
+}
+
+main ul {
+    width: 100%;
+}
+
+main ul li.box {
+    border-bottom: .01rem solid #CCC;
+    margin: .3rem;
+    width: calc(100% - 5.6rem);
+    list-style-type: none;
+}
+
+main ul li.box .li-top {}
+
+main ul li.box .li-top h2 {
+    font-size: .32rem;
+    margin: .1rem auto;
+    cursor: pointer;
+}
+
+main ul li.box .li-top h3 {
+    font-size: .28rem;
+    color: #CCC;
+    margin: .1rem auto;
+}
+
+main ul li.box .li-content {
+    font-size: .28rem;
+    max-height: 4rem;
+    word-break: break-all;
+    text-align: justify;
+    overflow: hidden;
+}
+
+main ul li.box .li-bottom {
+    color: #CCC;
+    margin: .2rem auto;
+    font-size: .18rem;
+    overflow: hidden;
+}
+
+main ul li.box .li-bottom .li-bottom-col {
+    float: left;
+    margin-right: .5rem;
+}
+
+main ul li.box .li-bottom .li-bottom-col i {
+    width: .2rem;
+    height: .2rem;
+    display: inline-block;
+    background: url(../images/tag.png) no-repeat center center;
+    background-size: contain;
+    float: left;
+    margin-right: .1rem;
+}
+
+main ul li.box .li-bottom .li-bottom-col:last-child i {
+    background: url(../images/view.png) no-repeat center center;
+    background-size: contain;
+}
+
+main .content {
+    margin: 0 .3rem;
+    padding: 0 !important;
+    width: calc(100% - 5.6rem) !important;
+}
+
+main .content img {
+	max-width: 100%;
+}
+
+main .content pre {
+	max-width: 100%;
+  	overflow-x: auto;
+}
+
+main .footer {
+    margin: .5rem .3rem;
+    width: calc(100% - 5.6rem);
+}
+
+main .footer h2 {
+    font-size: .32rem;
+    margin: .2rem auto;
+}
+
+/* 分页样式 开始 */
+main .page {
+    width: calc(100% - 5.6rem);
+    text-align: center;
+    margin: 0 .3rem;
+}
+main .page a {
+    display: inline-block !important;
+    padding: .1rem;
+    font-size: .24rem;
+}
+
+main .page span.current {
+    color: #999 !important;
+    font-size: .36rem;
+}
+
+/* 分页样式 结束 */
+
+#remark {
+    width: 100%;
+}
+
+#remark .row {
+    margin-bottom: .2rem;
+}
+
+#remark .row .col {
+    float: left;
+    margin-right: .5rem;
+    position: relative;
+}
+
+#remark .row .col label {
+    font-size: .24rem;
+    z-index: 9;
+    position: absolute;
+    top: -.15rem;
+    left: .1rem;
+    background: #FFF;
+    display: inline-block;
+    padding: 0 .1rem;
+}
+
+#remark .row .col input {
+    width: 3rem;
+    height: .5rem;
+    font-size: .24rem;
+    z-index: 1;
+    padding: 0 .1rem;
+    border: .01rem solid #0e373c;
+    
+}
+
+/* 评论样式 开始 */
+
+#show {
+    width: 98%;
+    max-width: 98%;
+    min-height: .3rem;
+    border-bottom: .01rem solid #0e373c;
+    margin: .3rem auto .2rem auto;
+    padding: .1rem 1%;
+    overflow: inherit;
+    word-break: break-all;
+    
+}
+
+#saytext {
+    width: 98%;
+    padding: 1%;
+    min-height: 2rem;
+    max-width: 98%;
+    border: .01rem solid #0e373c;
+    
+}
+
+#remark .row p {
+    position: relative;
+}
+
+#remark .row p span.emotion {
+    display: inline-block;
+    margin-left: .1rem;
+    font-size: .18rem;
+}
+
+#remark .row p button {
+    background: none;
+    box-shadow: .05rem .05rem .05rem #0e373c;
+    cursor: pointer;
+    font-size: .24rem;
+    padding: .1rem .2rem;
+    border: none;
+}
+
+#facebox {
+    left: 1.5rem !important;
+    top: .1rem !important;
+}
+
+/* 评论样式 结束 */
+
+@media screen and (max-width: 1200px) {
+    header {
+        position: static;
+        background: url(../images/newbg.jpg) no-repeat fixed;
+        background-size: 100% auto;
+        width: 100%;
+        height: auto;
+        transition: all 1s;
+        display: block;
+        clear: both;
+        padding-bottom: .5rem;
+    }
+
+    main {
+        float: left;
+        left: 0 !important;
+        width: 100%;
+    }
+
+    main ul li.box {
+        width: calc(100% - .6rem) !important;
+    }
+
+    main .content {
+        width: calc(100% - .6rem) !important;
+    }
+
+    main .footer {
+        width: calc(100% - .6rem) !important;
+    }
+
+    /* 分页样式 开始 */
+    main .page {
+        width: calc(100% - .6rem) !important;
+    }
+
+    main .page ul li {
+        width: auto !important;
+        padding: .1rem;
+    }
+    /* 分页样式 结束 */
+
+    #facebox {
+        left: 0rem !important;
+        top: 1rem !important;
+    }
+
+    .editormd-preview-container, .editormd-html-preview {
+        padding: 0 !important;
+    }
+}

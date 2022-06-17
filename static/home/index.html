@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>懒得去想名</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./images/headimg.jpg" alt="">
+        <a href="/" class="top">Zero@Room</a>
+        <p>笔落兴亡定三端之妙 墨写清白尽六义之奥</p>
+        <div class="link">
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+    </header>
+    <main>
+        <ul>
+            <li>
+                <div class="li-top">
+                    <h2 onclick="window.location.href='./detail.html'">title</h2>
+                    <h3>date</h3>
+                </div>
+                <div class="li-content">
+                    content
+                </div>
+                <div class="li-bottom">
+                    <i></i>标签
+                </div>
+            </li>
+            <li>
+                <div class="li-top">
+                    <h2>title</h2>
+                    <h3>date</h3>
+                </div>
+                <div class="li-content">content</div>
+                <div class="li-bottom">
+                    <i></i>标签
+                </div>
+            </li>
+            <li>
+                <div class="li-top">
+                    <h2>title</h2>
+                    <h3>date</h3>
+                </div>
+                <div class="li-content">content</div>
+                <div class="li-bottom">
+                    <i></i>标签
+                </div>
+            </li>
+            <li>
+                <div class="li-top">
+                    <h2>title</h2>
+                    <h3>date</h3>
+                </div>
+                <div class="li-content">content</div>
+                <div class="li-bottom">
+                    <i></i>标签
+                </div>
+            </li>
+        </ul>
+    </main>
+    <script src="./js/font.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function () {
+
+            $(".li-content").each(function () {
+                var len = $(this).text().length;   //当前HTML对象text的长度
+                if (len > 255) {
+                    var str = "";
+                    str = $(this).text().substring(0, 255) + "...";  //使用字符串截取，获取前30个字符，多余的字符使用“......”代替
+                    $(this).html(str);                   //将替换的值赋值给当前对象
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
